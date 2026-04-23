@@ -10,7 +10,7 @@ export default function CodingClasses() {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">Coding Classes</h1>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-yellow-400">Coding Classes</h1>
               <p className="text-xl text-cream/90 max-w-2xl">
                 Learn coding skills from industry experts. Perfect for beginners and experienced programmers looking to expand their knowledge.
               </p>

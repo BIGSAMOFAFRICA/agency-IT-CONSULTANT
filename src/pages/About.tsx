@@ -6,7 +6,7 @@ export default function About() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-brown-primary to-brown-dark text-cream py-16 md:py-24">
         <div className="section-container">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Moob Consulting</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6  text-yellow-400">About Moob Consulting</h1>
           <p className="text-xl text-cream/90 max-w-2xl">
             Founded in 2026, we're an international IT consultancy driven by passion for technology and commitment to excellence.
           </p>

@@ -30,7 +30,7 @@ export default function Home() {
           <div className="space-y-8">
             <div data-reveal className="space-y-5">
               <p className="eyebrow">Technology consulting for ambitious teams</p>
-              <h1 className="max-w-4xl font-display text-5xl leading-[0.96] text-brown-primary sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-4xl font-display text-5xl leading-[0.96] text-yellow-primary sm:text-6xl lg:text-7xl">
                 Built with restraint. Felt with confidence.
               </h1>
               <p className="max-w-2xl text-base leading-8 text-dark-gray/72 sm:text-lg">
