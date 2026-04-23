@@ -1,0 +1,16 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F2937"/>
+      <stop offset="1" stop-color="#0EA5A5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="160" y="160" width="880" height="480" rx="24" fill="white" fill-opacity="0.18"/>
+  <rect x="240" y="450" width="90" height="120" rx="10" fill="white" fill-opacity="0.42"/>
+  <rect x="360" y="390" width="90" height="180" rx="10" fill="white" fill-opacity="0.42"/>
+  <rect x="480" y="340" width="90" height="230" rx="10" fill="white" fill-opacity="0.42"/>
+  <rect x="600" y="280" width="90" height="290" rx="10" fill="white" fill-opacity="0.42"/>
+  <polyline points="760,500 820,430 880,460 940,340" stroke="white" stroke-opacity="0.65" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <text x="240" y="720" fill="white" font-size="52" font-family="Arial, sans-serif" font-weight="700">Enterprise Analytics</text>
+</svg>

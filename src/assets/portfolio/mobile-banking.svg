@@ -1,0 +1,15 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2E5A"/>
+      <stop offset="1" stop-color="#3AAFA9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="460" y="120" width="280" height="560" rx="36" fill="white" fill-opacity="0.2"/>
+  <rect x="492" y="190" width="216" height="300" rx="16" fill="white" fill-opacity="0.28"/>
+  <rect x="492" y="510" width="216" height="24" rx="8" fill="white" fill-opacity="0.4"/>
+  <rect x="492" y="550" width="150" height="24" rx="8" fill="white" fill-opacity="0.35"/>
+  <circle cx="600" cy="628" r="26" fill="white" fill-opacity="0.45"/>
+  <text x="350" y="720" fill="white" font-size="52" font-family="Arial, sans-serif" font-weight="700">Mobile Banking App</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F3E46"/>
+      <stop offset="1" stop-color="#84A98C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="160" y="180" width="880" height="440" rx="24" fill="white" fill-opacity="0.18"/>
+  <polygon points="260,420 420,280 580,420" fill="white" fill-opacity="0.38"/>
+  <rect x="320" y="420" width="200" height="140" fill="white" fill-opacity="0.3"/>
+  <rect x="650" y="260" width="280" height="36" rx="8" fill="white" fill-opacity="0.45"/>
+  <rect x="650" y="318" width="240" height="24" rx="8" fill="white" fill-opacity="0.3"/>
+  <rect x="650" y="356" width="220" height="24" rx="8" fill="white" fill-opacity="0.3"/>
+  <text x="300" y="720" fill="white" font-size="52" font-family="Arial, sans-serif" font-weight="700">Real Estate Marketplace</text>
+</svg>

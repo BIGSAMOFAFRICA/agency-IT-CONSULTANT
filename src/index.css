@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 bg-cream font-sans text-dark-gray antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(212, 165, 116, 0.22), transparent 28%),
+      radial-gradient(circle at top right, rgba(107, 68, 35, 0.08), transparent 24%),
+      linear-gradient(180deg, #f8f3eb 0%, #f5f1e8 45%, #f3eee6 100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply m-0 text-brown-primary;
+  }
+
+  p {
+    @apply m-0;
+  }
+
+  a {
+    @apply text-inherit no-underline transition-all duration-300;
+  }
+
+  button {
+    font: inherit;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  ::selection {
+    background: rgba(107, 68, 35, 0.16);
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply font-display text-4xl leading-tight text-brown-primary sm:text-5xl;
+  }
+
+  .section-subtitle {
+    @apply max-w-2xl text-base leading-8 text-dark-gray/70;
+  }
+
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-[0.32em] text-dark-gray/45;
+  }
+
+  .btn-primary {
+    @apply rounded-full border border-brown-primary bg-brown-primary px-6 py-3 text-sm font-semibold text-cream shadow-[0_14px_32px_rgba(74,44,26,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brown-dark;
+  }
+
+  .btn-secondary {
+    @apply rounded-full border border-mustard bg-mustard px-6 py-3 text-sm font-semibold text-brown-dark shadow-[0_14px_32px_rgba(212,165,116,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-mustard-dark;
+  }
+
+  .btn-outline {
+    @apply rounded-full border border-brown-primary/20 bg-white/80 px-6 py-3 text-sm font-semibold text-brown-primary backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-brown-primary/30 hover:bg-white;
+  }
+
+  .hero-shell {
+    @apply relative overflow-hidden;
+  }
+
+  .panel-card {
+    @apply rounded-[2rem] border border-brown-primary/10 bg-white/70 p-8 shadow-[0_24px_80px_rgba(87,60,31,0.08)] backdrop-blur-md lg:p-10;
+  }
+
+  .soft-card {
+    @apply rounded-[1.75rem] border border-brown-primary/10 bg-white/70 p-7 shadow-[0_18px_50px_rgba(87,60,31,0.05)] backdrop-blur-sm;
+  }
+
+  .metric-card {
+    @apply rounded-[1.5rem] border border-brown-primary/10 bg-white/70 p-5 shadow-[0_12px_32px_rgba(87,60,31,0.05)];
+  }
+
+  .soft-row {
+    @apply flex items-center gap-3 rounded-full border border-brown-primary/10 bg-cream/80 px-4 py-3 text-sm text-dark-gray/70;
+  }
+
+  .cta-card {
+    @apply rounded-[2rem] bg-brown-primary p-8 shadow-[0_28px_80px_rgba(74,44,26,0.2)] lg:p-10;
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 50%);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+}
+
+#root {
+  @apply min-h-screen;
+}
