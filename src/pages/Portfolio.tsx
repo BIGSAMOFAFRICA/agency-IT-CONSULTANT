@@ -2,16 +2,6 @@ import { Code2, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function Portfolio() {
-  const caseStudyStyles = [
-    {
-      panel: 'bg-gradient-to-br from-mustard/20 to-mustard/5 border-2 border-mustard/30',
-      text: 'text-mustard',
-    },
-    {
-      panel: 'bg-gradient-to-br from-brown-primary/20 to-brown-primary/5 border-2 border-brown-primary/30',
-      text: 'text-brown-primary',
-    },
-  ]
   const projects = [
     {
       title: 'E-Commerce Platform',
