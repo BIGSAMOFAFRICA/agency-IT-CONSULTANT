@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import Logo from '../assets/logo.png'
 
 const navItems = [
   { to: '/', label: 'Home' },
@@ -19,7 +20,7 @@ export default function Navigation() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3 text-sm uppercase tracking-[0.28em] text-brown-primary">
           <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brown-primary/15 bg-white text-xs font-bold shadow-[0_8px_30px_rgba(87,60,31,0.08)]">
-            MC
+            <img src={Logo} alt="Moob Consulting Logo" />
           </div>
           <div>
             <div className="font-semibold">Moob Consulting</div>
