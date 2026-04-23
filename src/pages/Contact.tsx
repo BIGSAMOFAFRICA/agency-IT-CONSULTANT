@@ -226,8 +226,8 @@ export default function Contact() {
       {/* Map Section */}
       <section className="section-container">
         <h2 className="text-4xl font-bold text-brown-primary text-center mb-12">Visit Our Office</h2>
-        <div className="bg-gradient-to-br from-brown-primary/10 to-mustard/10 h-96 rounded-2xl border-2 border-brown-primary/20 flex items-center justify-center overflow-hidden">
-          <div className="text-center">
+        <div className="bg-gradient-to-br from-brown-primary/10 to-mustard/10 h-72 md:h-96 rounded-2xl border-2 border-brown-primary/20 flex items-center justify-center overflow-hidden">
+          <div className="text-center px-4 sm:px-0">
             <MapPin size={64} className="text-brown-primary mx-auto mb-4" />
             <p className="text-dark-gray text-lg font-semibold">
               Theodak Plaza, CBD, Abuja Nigeria

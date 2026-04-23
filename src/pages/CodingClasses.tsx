@@ -1,5 +1,6 @@
 import { BookOpen, Users, Award, Clock, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Bootcamp from '../assets/bootcamp.jpg'
 
 export default function CodingClasses() {
   return (
@@ -7,10 +8,22 @@ export default function CodingClasses() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-brown-primary to-brown-dark text-cream py-16 md:py-24">
         <div className="section-container">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Coding Classes</h1>
-          <p className="text-xl text-cream/90 max-w-2xl">
-            Learn coding skills from industry experts. Perfect for beginners and experienced programmers looking to expand their knowledge.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
+            <div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">Coding Classes</h1>
+              <p className="text-xl text-cream/90 max-w-2xl">
+                Learn coding skills from industry experts. Perfect for beginners and experienced programmers looking to expand their knowledge.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] overflow-hidden shadow-2xl border border-cream/20 aspect-[4/3] md:aspect-[5/3]">
+              <img
+                src={Bootcamp}
+                alt="Coding class illustration"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -38,7 +51,7 @@ export default function CodingClasses() {
       <section className="section-container bg-cream mt-16">
         <h2 className="section-title text-center">Our Courses</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-12">
           {[
             {
               title: 'Python Fundamentals',
@@ -46,6 +59,7 @@ export default function CodingClasses() {
               duration: '8 weeks',
               desc: 'Start your coding journey with Python. Learn syntax, data structures, and build real projects.',
               topics: ['Syntax & Variables', 'Functions & Modules', 'OOP Basics', 'File Handling'],
+              image: 'python class.jpg',
             },
             {
               title: 'Web Development',
@@ -53,6 +67,7 @@ export default function CodingClasses() {
               duration: '12 weeks',
               desc: 'Build modern websites using HTML, CSS, and JavaScript. Create responsive, interactive web applications.',
               topics: ['HTML & CSS', 'JavaScript', 'React.js', 'Responsive Design'],
+              image: 'webdevelopment class.jpg',
             },
             {
               title: 'Mobile App Development',
@@ -60,6 +75,7 @@ export default function CodingClasses() {
               duration: '10 weeks',
               desc: 'Create native and cross-platform mobile applications for iOS and Android.',
               topics: ['React Native', 'App Architecture', 'APIs', 'Deployment'],
+              image: 'mobile development class.jpg',
             },
             {
               title: 'Backend Development',
@@ -67,6 +83,7 @@ export default function CodingClasses() {
               duration: '12 weeks',
               desc: 'Master server-side development with Node.js. Build scalable, secure backend systems.',
               topics: ['Node.js', 'Databases', 'REST APIs', 'Authentication'],
+              image: 'backend class.jpg',
             },
             {
               title: 'Data Science & AI',
@@ -74,6 +91,7 @@ export default function CodingClasses() {
               duration: '10 weeks',
               desc: 'Learn data analysis, visualization, and machine learning with Python and popular libraries.',
               topics: ['Pandas & NumPy', 'Data Visualization', 'ML Algorithms', 'TensorFlow'],
+              image: 'datascience class.jpg',
             },
             {
               title: 'Kids Coding',
@@ -81,22 +99,32 @@ export default function CodingClasses() {
               duration: 'Flexible',
               desc: 'Introduction to programming for children. Fun, interactive lessons using Scratch and Python.',
               topics: ['Logic & Problem Solving', 'Visual Programming', 'Game Development'],
+              image: 'kids coding class.jpg',
             },
           ].map((course, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border-l-4 border-brown-primary">
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-brown-primary mb-2">{course.title}</h3>
-                <div className="flex flex-wrap gap-3 mb-4 text-sm">
-                  <span className="bg-mustard/20 text-mustard px-3 py-1 rounded-full">
-                    {course.level}
-                  </span>
-                  <span className="bg-brown-primary/10 text-brown-primary px-3 py-1 rounded-full">
-                    {course.duration}
-                  </span>
+            <div key={idx} className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-brown-primary/10 flex flex-col h-full">
+              <div className="aspect-[4/3] sm:aspect-[3/2] overflow-hidden">
+                <img
+                  src={new URL(`../assets/${course.image}`, import.meta.url).href}
+                  alt={`${course.title} class`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div>
+                  <h3 className="text-2xl font-bold text-brown-primary mb-2">{course.title}</h3>
+                  <div className="flex flex-wrap gap-3 mb-4 text-sm">
+                    <span className="bg-mustard/20 text-mustard px-3 py-1 rounded-full">
+                      {course.level}
+                    </span>
+                    <span className="bg-brown-primary/10 text-brown-primary px-3 py-1 rounded-full">
+                      {course.duration}
+                    </span>
+                  </div>
+                  <p className="text-dark-gray/80 mb-4">{course.desc}</p>
                 </div>
-                <p className="text-dark-gray/80 mb-4">{course.desc}</p>
 
-                <div className="mb-4">
+                <div className="mb-6">
                   <h4 className="font-semibold text-brown-primary mb-2 text-sm">Topics Covered:</h4>
                   <div className="flex flex-wrap gap-2">
                     {course.topics.map((topic, i) => (
@@ -107,7 +135,7 @@ export default function CodingClasses() {
                   </div>
                 </div>
 
-                <button className="text-mustard font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                <button className="mt-auto text-mustard font-semibold flex items-center gap-2 hover:gap-3 transition-all">
                   Learn More
                   <ArrowRight size={18} />
                 </button>

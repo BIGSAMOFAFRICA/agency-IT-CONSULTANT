@@ -5,6 +5,7 @@ const services = [
   {
     title: 'Website Design',
     icon: Monitor,
+    image: 'webdesign.jpg',
     summary:
       'Service websites, landing pages, and brand platforms with cleaner hierarchy, stronger tone, and better conversion flow.',
     deliverables: [
@@ -16,6 +17,7 @@ const services = [
   {
     title: 'Product and App Development',
     icon: Code2,
+    image: 'mobile development class.jpg',
     summary:
       'Internal tools and customer-facing applications built to reduce operational friction and hold up under real usage.',
     deliverables: [
@@ -27,6 +29,7 @@ const services = [
   {
     title: 'IT Support and Advisory',
     icon: Headphones,
+    image: 'backend class.jpg',
     summary:
       'Hands-on technical support for teams that need reliable guidance, system maintenance, and implementation help.',
     deliverables: [
@@ -38,6 +41,7 @@ const services = [
   {
     title: 'Coding Classes',
     icon: BookOpen,
+    image: 'bootcamp.jpg',
     summary:
       'Structured training for students, entry-level professionals, and organizations that want practical technical skills.',
     deliverables: [
@@ -52,7 +56,7 @@ export default function Services() {
   return (
     <div>
       <section className="hero-shell">
-        <div className="section-container grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:py-24">
+        <div className="section-container grid gap-12 py-16 md:grid-cols-[1.1fr_0.9fr] md:items-end md:py-24">
           <div data-reveal className="space-y-6">
             <p className="eyebrow">Services</p>
             <h1 className="max-w-4xl font-display text-5xl leading-[0.97] text-brown-primary sm:text-6xl">
@@ -81,7 +85,7 @@ export default function Services() {
             <article
               key={service.title}
               data-reveal
-              className="grid gap-8 border-b border-brown-primary/10 py-8 lg:grid-cols-[0.24fr_0.9fr_0.7fr]"
+              className="grid gap-8 border-b border-brown-primary/10 py-8 md:grid-cols-[0.24fr_1fr_0.8fr]"
             >
               <div className="flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-dark-gray/40">
                 <service.icon size={18} className="text-mustard" />
@@ -93,6 +97,13 @@ export default function Services() {
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-dark-gray/68">
                   {service.summary}
                 </p>
+                <div className="mt-6 rounded-3xl overflow-hidden border border-brown-primary/10 shadow-sm">
+                  <img
+                    src={new URL(`../assets/${service.image}`, import.meta.url).href}
+                    alt={`${service.title} illustration`}
+                    className="w-full h-56 sm:h-64 object-cover"
+                  />
+                </div>
               </div>
 
               <div className="space-y-3">

@@ -144,6 +144,7 @@ export default function Portfolio() {
               solution: 'Migrated to microservices architecture with AWS',
               results: '3x performance improvement, 99.99% uptime',
               color: 'mustard',
+              image: 'case study 1.jpg',
             },
             {
               title: 'Digital Transformation',
@@ -152,16 +153,16 @@ export default function Portfolio() {
               solution: 'Built integrated e-commerce and inventory system',
               results: '40% increase in sales within 6 months',
               color: 'brown-primary',
+              image: 'case study 2.jpg',
             },
           ].map((study, idx) => (
             <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className={`${caseStudyStyles[idx].panel} h-72 rounded-xl flex items-center justify-center`}>
-                <div className="text-center">
-                  <div className={`${caseStudyStyles[idx].text} mb-2 text-5xl font-bold`}>
-                    {idx + 1}
-                  </div>
-                  <p className={`${caseStudyStyles[idx].text} font-semibold`}>Case Study</p>
-                </div>
+              <div className="h-72 rounded-xl overflow-hidden">
+                <img
+                  src={new URL(`../assets/${study.image}`, import.meta.url).href}
+                  alt={`${study.title} case study`}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div>

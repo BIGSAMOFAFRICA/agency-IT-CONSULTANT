@@ -15,21 +15,39 @@ export default function About() {
 
       {/* Mission & Vision */}
       <section className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 mb-16">
-          <div className="bg-gradient-to-br from-mustard/10 to-mustard/5 p-8 rounded-2xl border border-mustard/20">
-            <Target className="text-mustard mb-4" size={40} />
-            <h2 className="text-3xl font-bold text-brown-primary mb-4">Our Mission</h2>
-            <p className="text-dark-gray/80 text-lg leading-relaxed">
-              To empower businesses and individuals through innovative IT solutions, exceptional service delivery, and comprehensive educational programs that build lasting partnerships and drive sustainable growth.
-            </p>
+        <div className="space-y-16 mt-12 mb-16">
+          {/* Mission */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-brown-primary mb-4">Our Mission</h2>
+              <p className="text-dark-gray/80 text-lg leading-relaxed">
+                To empower businesses and individuals through innovative IT solutions, exceptional service delivery, and comprehensive educational programs that build lasting partnerships and drive sustainable growth.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden h-72">
+              <img
+                src={new URL(`../assets/mission.jpg`, import.meta.url).href}
+                alt="Our Mission"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
-          <div className="bg-gradient-to-br from-brown-primary/10 to-brown-primary/5 p-8 rounded-2xl border border-brown-primary/20">
-            <Award className="text-brown-primary mb-4" size={40} />
-            <h2 className="text-3xl font-bold text-brown-primary mb-4">Our Vision</h2>
-            <p className="text-dark-gray/80 text-lg leading-relaxed">
-              To be the most trusted IT consulting partner in Africa and beyond, recognized for delivering cutting-edge technology solutions with uncompromising quality and integrity.
-            </p>
+          {/* Vision */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="rounded-2xl overflow-hidden h-72 md:order-2">
+              <img
+                src={new URL(`../assets/vision.jpg`, import.meta.url).href}
+                alt="Our Vision"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="md:order-1">
+              <h2 className="text-3xl font-bold text-brown-primary mb-4">Our Vision</h2>
+              <p className="text-dark-gray/80 text-lg leading-relaxed">
+                To be the most trusted IT consulting partner in Africa and beyond, recognized for delivering cutting-edge technology solutions with uncompromising quality and integrity.
+              </p>
+            </div>
           </div>
         </div>
       </section>
