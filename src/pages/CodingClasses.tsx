@@ -172,21 +172,47 @@ export default function CodingClasses() {
         <h2 className="section-title text-center">Affordable Pricing</h2>
 
         <div className="max-w-2xl mx-auto mt-12 bg-white p-8 rounded-xl border-2 border-mustard/20">
-          <div className="space-y-4 mb-8">
-            <div className="flex justify-between items-center border-b pb-3">
-              <span className="text-dark-gray">Short Courses (4-8 weeks)</span>
-              <span className="font-bold text-brown-primary text-lg">₦15,000 - ₦35,000</span>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-brown-primary text-center mb-4">For Nigerian Students</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center border-b pb-2">
+                  <span className="text-dark-gray">Short Courses (4-8 weeks)</span>
+                  <span className="font-bold text-brown-primary">₦150,000 - ₦200,000</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-2">
+                  <span className="text-dark-gray">Standard Courses (10-12 weeks)</span>
+                  <span className="font-bold text-brown-primary">₦250,000 - ₦300,000</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-dark-gray">Kids Coding (Per Month)</span>
+                  <span className="font-bold text-brown-primary">₦50,000 - ₦70,000</span>
+                </div>
+              </div>
             </div>
-            <div className="flex justify-between items-center border-b pb-3">
-              <span className="text-dark-gray">Standard Courses (10-12 weeks)</span>
-              <span className="font-bold text-brown-primary text-lg">₦50,000 - ₦75,000</span>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-brown-primary text-center mb-4">For International Students</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center border-b pb-2">
+                  <span className="text-dark-gray">Short Courses (4-8 weeks)</span>
+                  <span className="font-bold text-brown-primary">$200 - $400</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-2">
+                  <span className="text-dark-gray">Standard Courses (10-12 weeks)</span>
+                  <span className="font-bold text-brown-primary">$500 - $700</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-dark-gray">Kids Coding (Per Month)</span>
+                  <span className="font-bold text-brown-primary">$150 - $200</span>
+                </div>
+              </div>
             </div>
-            <div className="flex justify-between items-center border-b pb-3">
-              <span className="text-dark-gray">Kids Coding (Per Month)</span>
-              <span className="font-bold text-brown-primary text-lg">₦10,000 - ₦15,000</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-dark-gray">Group Discounts</span>
+          </div>
+
+          <div className="text-center border-t pt-6">
+            <div className="flex justify-center items-center mb-4">
+              <span className="text-dark-gray mr-4">Group Discounts Available:</span>
               <span className="font-bold text-mustard">10-30% OFF</span>
             </div>
           </div>

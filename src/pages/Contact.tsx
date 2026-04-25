@@ -1,5 +1,10 @@
-import { useState } from 'react'
+import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { Phone, Mail, MapPin, Send } from 'lucide-react'
+import emailjs from '@emailjs/browser'
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? 'YOUR_SERVICE_ID'
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? 'YOUR_TEMPLATE_ID'
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? 'YOUR_PUBLIC_KEY'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,8 +17,10 @@ export default function Contact() {
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [isSending, setIsSending] = useState(false)
+  const [statusMessage, setStatusMessage] = useState<string | null>(null)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -21,15 +28,35 @@ export default function Contact() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // In a real application, you would send this to a backend
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
+    setIsSending(true)
+    setStatusMessage(null)
+
+    const templateParams = {
+      from_name: formData.name,
+      reply_to: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      subject: formData.subject,
+      message: formData.message,
+    }
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      setSubmitted(true)
+      setStatusMessage('Your message has been sent successfully.')
       setFormData({ name: '', email: '', phone: '', company: '', subject: '', message: '' })
-      setSubmitted(false)
-    }, 3000)
+    } catch (error) {
+      console.error('EmailJS send error:', error)
+      setStatusMessage('Something went wrong while sending the message. Please try again later.')
+    } finally {
+      setIsSending(false)
+      setTimeout(() => {
+        setSubmitted(false)
+        setStatusMessage(null)
+      }, 5000)
+    }
   }
 
   return (
@@ -37,7 +64,7 @@ export default function Contact() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-brown-primary to-brown-dark text-cream py-16 md:py-24">
         <div className="section-container">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-yellow-400">Get In Touch</h1>
           <p className="text-xl text-cream/90 max-w-2xl">
             We'd love to hear from you. Let's discuss your project and explore how we can help.
           </p>
@@ -97,10 +124,10 @@ export default function Contact() {
             Fill out the form below and we'll get back to you as soon as possible.
           </p>
 
-          {submitted && (
-            <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-              <p className="font-semibold">Thank you for your message!</p>
-              <p>We'll be in touch soon. Check your email for confirmation.</p>
+          {statusMessage && (
+            <div className={`mb-6 p-4 rounded-lg ${submitted ? 'bg-green-100 border border-green-400 text-green-700' : 'bg-yellow-100 border border-yellow-400 text-yellow-800'}`}>
+              <p className="font-semibold">{submitted ? 'Message Sent' : 'Sending Status'}</p>
+              <p>{statusMessage}</p>
             </div>
           )}
 
@@ -210,10 +237,11 @@ export default function Contact() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full btn-primary flex items-center justify-center gap-2 text-lg"
+              disabled={isSending}
+              className="w-full btn-primary flex items-center justify-center gap-2 text-lg disabled:cursor-not-allowed disabled:opacity-60"
             >
               <Send size={20} />
-              Send Message
+              {isSending ? 'Sending...' : 'Send Message'}
             </button>
 
             <p className="text-center text-dark-gray/60 text-sm mt-4">
