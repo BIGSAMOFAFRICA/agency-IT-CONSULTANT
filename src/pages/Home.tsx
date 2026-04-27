@@ -50,10 +50,7 @@ export default function Home() {
               "telephone": "+2348135523948",
               "email": "moobconsulting@gmail.com",
               "contactType": "customer service"
-            },
-            "sameAs": [
-              "https://linkedin.com/company/moob-consulting"
-            ]
+            }
           })}
         </script>
       </Helmet>
