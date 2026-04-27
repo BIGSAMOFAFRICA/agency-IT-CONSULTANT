@@ -1,5 +1,6 @@
 import { Code2, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function Portfolio() {
   const projects = [
@@ -48,7 +49,14 @@ export default function Portfolio() {
   ]
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Portfolio - Our Web Development & IT Projects | Moob Consulting</title>
+        <meta name="description" content="Explore our portfolio of successful web development, app development, and IT consulting projects. See how we've helped businesses transform their digital presence." />
+        <meta name="keywords" content="portfolio, web development projects, app development case studies, IT consulting work, successful projects" />
+        <link rel="canonical" href="https://moobconsulting.com/portfolio" />
+      </Helmet>
+      <div>
       {/* Hero */}
       <section className="bg-gradient-to-br from-brown-primary to-brown-dark text-cream py-16 md:py-24">
         <div className="section-container">
@@ -219,5 +227,6 @@ export default function Portfolio() {
         </div>
       </section>
     </div>
+    </>
   )
 }

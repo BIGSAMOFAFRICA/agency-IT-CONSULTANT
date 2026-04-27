@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import PageTransition from './components/PageTransition'
@@ -32,8 +33,10 @@ function AppShell() {
 
 export default function App() {
   return (
-    <Router>
-      <AppShell />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <AppShell />
+      </Router>
+    </HelmetProvider>
   )
 }

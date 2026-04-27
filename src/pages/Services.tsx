@@ -1,5 +1,6 @@
 import { ArrowRight, BookOpen, Code2, Headphones, Monitor } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const services = [
   {
@@ -54,7 +55,14 @@ const services = [
 
 export default function Services() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>IT Services - Web Development, App Development & Consulting | Moob Consulting</title>
+        <meta name="description" content="Comprehensive IT services including website design, app development, coding classes, and technical support. Professional technology solutions for businesses in Abuja, Nigeria." />
+        <meta name="keywords" content="IT services, web development, app development, coding classes, technical support, software development" />
+        <link rel="canonical" href="https://moobconsulting.com/services" />
+      </Helmet>
+      <div>
       <section className="hero-shell">
         <div className="section-container grid gap-12 py-16 md:grid-cols-[1.1fr_0.9fr] md:items-end md:py-24">
           <div data-reveal className="space-y-6">
@@ -147,5 +155,6 @@ export default function Services() {
         </div>
       </section>
     </div>
+    </>
   )
 }

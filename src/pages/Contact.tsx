@@ -1,6 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { Phone, Mail, MapPin, Send } from 'lucide-react'
 import emailjs from '@emailjs/browser'
+import { Helmet } from 'react-helmet-async'
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? 'service_w4drz3h'
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? 'template_g03w2hi'
@@ -60,7 +61,14 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Contact Moob Consulting LLC - Get In Touch Today</title>
+        <meta name="description" content="Contact Moob Consulting LLC for IT consulting, web development, and technology solutions. Located in Abuja, Nigeria. Phone: +2348135523948, Email: hello@moobconsulting.com" />
+        <meta name="keywords" content="contact Moob Consulting, IT consulting Abuja, web development Nigeria, get quote, technology solutions" />
+        <link rel="canonical" href="https://moobconsulting.com/contact" />
+      </Helmet>
+      <div>
       {/* Hero */}
       <section className="bg-gradient-to-br from-brown-primary to-brown-dark text-cream py-16 md:py-24">
         <div className="section-container">
@@ -298,5 +306,6 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   )
 }

@@ -1,5 +1,6 @@
 import { ArrowRight, Code2, Landmark, MonitorSmartphone, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const offers = [
   {
@@ -24,7 +25,39 @@ const proof = [
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Moob Consulting LLC - IT Solutions & Consulting | Home</title>
+        <meta name="description" content="Leading IT consulting firm in Abuja, Nigeria. Expert web development, app development, coding classes, and technology solutions for businesses." />
+        <meta name="keywords" content="IT consulting Abuja, web development Nigeria, app development, coding classes, software development, technology consulting" />
+        <link rel="canonical" href="https://moobconsulting.com/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Moob Consulting LLC",
+            "url": "https://moobconsulting.com",
+            "logo": "https://your-domain.com/logo.png",
+            "description": "Professional IT consulting, web development, app development, and coding classes in Abuja, Nigeria.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Theodak Plaza, Central Business District",
+              "addressLocality": "Abuja",
+              "addressCountry": "NG"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+2348135523948",
+              "email": "moobconsulting@gmail.com",
+              "contactType": "customer service"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/moob-consulting"
+            ]
+          })}
+        </script>
+      </Helmet>
+      <div>
       <section className="hero-shell">
         <div className="section-container grid gap-14 py-16 lg:grid-cols-[1.25fr_0.9fr] lg:items-end lg:py-24">
           <div className="space-y-8">
@@ -174,5 +207,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   )
 }

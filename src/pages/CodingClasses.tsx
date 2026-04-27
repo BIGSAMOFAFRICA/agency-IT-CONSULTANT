@@ -1,10 +1,18 @@
 import { BookOpen, Users, Award, Clock, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import Bootcamp from '../assets/bootcamp.jpg'
 
 export default function CodingClasses() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Coding Classes & Bootcamps - Learn Programming | Moob Consulting</title>
+        <meta name="description" content="Professional coding classes and bootcamps in Abuja, Nigeria. Learn web development, app development, and programming skills from industry experts." />
+        <meta name="keywords" content="coding classes Abuja, programming bootcamp, web development training, app development course, learn programming Nigeria" />
+        <link rel="canonical" href="https://moobconsulting.com/coding-classes" />
+      </Helmet>
+      <div>
       {/* Hero */}
       <section className="bg-gradient-to-br from-brown-primary to-brown-dark text-cream py-16 md:py-24">
         <div className="section-container">
@@ -242,5 +250,6 @@ export default function CodingClasses() {
         </div>
       </section>
     </div>
+    </>
   )
 }

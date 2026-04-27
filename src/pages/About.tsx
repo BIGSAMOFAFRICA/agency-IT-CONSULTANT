@@ -1,8 +1,16 @@
 import { Award, Target, Heart, Zap } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 export default function About() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>About Moob Consulting LLC - Our Story & Expertise</title>
+        <meta name="description" content="Learn about Moob Consulting LLC's journey, expertise in IT consulting, web development, and commitment to delivering exceptional technology solutions in Abuja, Nigeria." />
+        <meta name="keywords" content="about Moob Consulting, IT consulting company, web development experts, technology solutions Abuja" />
+        <link rel="canonical" href="https://moobconsulting.com/about" />
+      </Helmet>
+      <div>
       {/* Hero */}
       <section className="bg-gradient-to-br from-brown-primary to-brown-dark text-cream py-16 md:py-24">
         <div className="section-container">
@@ -120,5 +128,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   )
 }
