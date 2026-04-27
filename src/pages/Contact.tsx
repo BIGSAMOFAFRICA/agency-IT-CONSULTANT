@@ -2,9 +2,9 @@ import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { Phone, Mail, MapPin, Send } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? 'YOUR_SERVICE_ID'
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? 'YOUR_TEMPLATE_ID'
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? 'YOUR_PUBLIC_KEY'
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? 'service_w4drz3h'
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? 'template_g03w2hi'
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? '4nj0b0uB2N2gryWRs'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -97,7 +97,7 @@ export default function Contact() {
               </div>
             </div>
             <h3 className="text-xl font-bold text-brown-primary mb-3">Email</h3>
-            <p className="text-dark-gray/80 font-semibold break-all">hello@moobconsulting.com</p>
+            <p className="text-dark-gray/80 font-semibold break-all">moobconsulting@gmail.com</p>
             <p className="text-sm text-dark-gray/60 mt-4">We typically respond within 24 hours</p>
           </div>
 
