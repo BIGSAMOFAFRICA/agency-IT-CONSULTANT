@@ -26,9 +26,9 @@ export default function Footer() {
 
         <div className="space-y-4 text-sm text-dark-gray/70">
           <p className="eyebrow">Contact</p>
-          <p>hello@moobconsulting.com</p>
+          <p>moobconsulting@gmail.com</p>
           <p>+234 813 552 3948</p>
-          <p>+1 903 270 9809</p>
+          <p>+1 (903) 265-1195</p>
           <p>Theodak Plaza, CBD, Abuja</p>
           <p>Nigeria and United States</p>
         </div>

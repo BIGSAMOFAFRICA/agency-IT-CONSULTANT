@@ -153,8 +153,8 @@ Edit `src/index.css` to modify:
 ## Contact Information
 
 **Company**: Moob Consulting LLC
-- **Phone**: +2348135523948 | +19032709809
-- **Email**: hello@moobconsulting.com
+- **Phone**: +2348135523948 | +1 (903) 265-1195
+- **Email**: moobconsulting@gmail.com
 - **Location**: Theodak Plaza, CBD, Abuja, Nigeria
 - **International**: United States
 

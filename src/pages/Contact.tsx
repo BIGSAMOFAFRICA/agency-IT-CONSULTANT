@@ -64,7 +64,7 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Contact Moob Consulting LLC - Get In Touch Today</title>
-        <meta name="description" content="Contact Moob Consulting LLC for IT consulting, web development, and technology solutions. Located in Abuja, Nigeria. Phone: +2348135523948, Email: hello@moobconsulting.com" />
+        <meta name="description" content="Contact Moob Consulting LLC for IT consulting, web development, and technology solutions. Located in Abuja, Nigeria. Phone: +2348135523948, Email: moobconsulting@gmail.com" />
         <meta name="keywords" content="contact Moob Consulting, IT consulting Abuja, web development Nigeria, get quote, technology solutions" />
         <link rel="canonical" href="https://moobconsulting.com/contact" />
       </Helmet>
@@ -92,7 +92,7 @@ export default function Contact() {
             <h3 className="text-xl font-bold text-brown-primary mb-3">Phone</h3>
             <div className="space-y-2">
               <p className="text-dark-gray/80 font-semibold">+2348135523948</p>
-              <p className="text-dark-gray/80 font-semibold">+19032709809</p>
+              <p className="text-dark-gray/80 font-semibold">+1 (903) 265-1195</p>
             </div>
             <p className="text-sm text-dark-gray/60 mt-4">Mon - Fri: 9:00 AM - 6:00 PM</p>
           </div>
