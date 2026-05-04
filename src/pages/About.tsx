@@ -16,7 +16,7 @@ export default function About() {
         <div className="section-container">
           <h1 className="text-5xl md:text-6xl font-bold mb-6  text-yellow-400">About Moob Consulting</h1>
           <p className="text-xl text-cream/90 max-w-2xl">
-            Founded in 2026, we're an international IT consultancy driven by passion for technology and commitment to excellence.
+            We're an international IT consultancy driven by passion for technology and commitment to excellence.
           </p>
         </div>
       </section>
@@ -91,7 +91,7 @@ export default function About() {
             </p>
 
             <p>
-              Founded in 2026, our team brings together seasoned professionals with diverse expertise in web design, application development, IT infrastructure, and technology education. We pride ourselves on understanding the unique challenges faced by businesses in emerging markets and delivering solutions that are both innovative and practical.
+              Our team brings together seasoned professionals with diverse expertise in web design, application development, IT infrastructure, and technology education. We pride ourselves on understanding the unique challenges faced by businesses in emerging markets and delivering solutions that are both innovative and practical.
             </p>
 
             <p>

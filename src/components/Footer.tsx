@@ -36,7 +36,7 @@ export default function Footer() {
 
       <div className="border-t border-brown-primary/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-xs uppercase tracking-[0.22em] text-dark-gray/45 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-          <p>© 2026 Moob Consulting LLC</p>
+          <p>© Moob Consulting LLC</p>
           <p>Strategy • Design • Delivery</p>
         </div>
       </div>
